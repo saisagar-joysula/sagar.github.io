@@ -1,8 +1,37 @@
-# sagar website
+<html>
+<body>
+<title> J K S Sai Sagar</title>
+<h1> Welcome to my guessing game</h1>
 
-website created by J K S Sai Sagar
-this website just tells you about my name
-this website was intially created for my personal digital assignmnet work.
-this website was made using the github repository services now with the help of this services im able to host my website in github enterprise server.
-so if you have a doubt about the server im using it is github server.
-i hosted my website in github eterprise server.
+<?php
+$correctnumber=36; //change this number //
+
+if($_GET['guess'])
+{
+  if (is_numeric($_GET['guess'])===FALSE)
+ {
+echo "Your guess is not a number";
+}
+else if ($_GET['guess']<$correctnumber)
+ {
+echo "Your guess is too low";
+}
+else if ($_GET['guess']>$correctnumber)
+ {
+echo "Your guess is too high";
+}
+else if ($_GET['guess']==$correctnumber)
+ {
+echo "Congratulations - You are right";
+}
+}
+else
+{
+echo "Missing guess parameter <br> Your guess is too short";
+}
+
+
+
+?>
+</body>
+</html>
